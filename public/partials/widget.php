@@ -48,7 +48,6 @@
     <!-- END JETWEBINAR FIELD TEMPLATES -->
     <!-- START JETWEBINAR CODE -->
     
-    <script src="https://cdn.jetwebinar.com/assets/theme/scripts/jquery-1.11.2.min.js"></script>
     <script>
         var wb_id = <?=$atts['id']?>;
         var wb_url = "<?=get_option("jw_url")?>";
