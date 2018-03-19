@@ -49,13 +49,19 @@
     <!-- START JETWEBINAR CODE -->
     
     <script>
-        var wb_id = <?=$atts['id']?>;
-        var wb_url = "<?=get_option("jw_url")?>";
-        var script = document.createElement('script');
-        script.setAttribute('type', 'text/javascript');
-        script.setAttribute('src', 'https://'+wb_url+'/assets/js/api/widget.js');
-        document.head.appendChild(script);
+       var wb_id = <?=$atts['id']?>;
+       var wb_url = "<?=get_option("jw_url")?>";
+    
+    var $j = jQuery.noConflict();
+    $j(function() {
+       var script = document.createElement('script');
+       script.setAttribute('type', 'text/javascript');
+       script.setAttribute('src', 'https://<?=get_option("jw_url")?>/assets/js/api/widget_wp.js'); //'+wb_url+'
+       document.head.appendChild(script);
+    });
+        
     </script>
+    
     <!-- END JETWEBINAR CODE -->
 </body>
 </html>
